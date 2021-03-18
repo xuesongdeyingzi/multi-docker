@@ -14,7 +14,7 @@ after_success:
   - docker build -t xuesongdeyingzi/multi-server ./server
   - docker build -t xuesongdeyingzi/multi-worker ./worker  
 
-  - echo "$DOCKER_PW" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker push xuesongdeyingzi/multi-client
   - docker push xuesongdeyingzi/multi-nginx
   - docker push xuesongdeyingzi/multi-server
